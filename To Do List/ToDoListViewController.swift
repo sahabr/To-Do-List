@@ -20,7 +20,11 @@ class ToDoListViewController: UIViewController {
         tableView.dataSource = self
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let destination = segue.destination as! ToDoDetailTableViewController
+        }
+    }
 }
 
 extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
