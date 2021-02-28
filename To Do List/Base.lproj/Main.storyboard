@@ -77,7 +77,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-3d-aPn">
-                                                    <rect key="frame" x="20" y="5" width="374" height="34"/>
+                                                    <rect key="frame" x="18" y="5" width="373" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -140,16 +140,21 @@
                                 <action selector="cancelButtonPressed:" destination="Bfb-lF-FfS" id="A3d-Lj-fUn"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gdS-Cc-wSS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gdS-Cc-wSS">
+                            <connections>
+                                <segue destination="9qJ-i6-Txa" kind="unwind" unwindAction="unwindFromDetailWithSegue:" id="P8I-L5-3c7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="datePicker" destination="glI-4K-7eV" id="uOv-ct-R0h"/>
-                        <outlet property="nameField" destination="g4b-h4-NVe" id="G3h-Pm-Omx"/>
-                        <outlet property="noteView" destination="Xxn-a0-pV1" id="C20-IR-XZa"/>
+                        <outlet property="datePicker" destination="b74-HM-JDG" id="1C0-ne-Nza"/>
+                        <outlet property="nameField" destination="lcg-3d-aPn" id="sud-43-uUD"/>
+                        <outlet property="noteView" destination="CB1-kr-M0z" id="VfC-kG-zzt"/>
                         <outlet property="saveBarButton" destination="gdS-Cc-wSS" id="v9G-wP-Cjf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmy-Uv-CfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9qJ-i6-Txa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2734.7826086956525" y="106.47321428571428"/>
         </scene>
