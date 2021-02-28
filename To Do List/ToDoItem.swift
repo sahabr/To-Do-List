@@ -1,0 +1,14 @@
+//
+//  ToDoItem.swift
+//  To Do List
+//
+//  Created by Brishti Saha on 2/28/21.
+//
+
+import Foundation
+
+struct ToDoItem {
+    var name: String
+    var date: Date
+    var notes: String
+}
