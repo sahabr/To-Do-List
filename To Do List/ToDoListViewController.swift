@@ -166,6 +166,7 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource, Li
         cell.delegate = self
         cell.nameLabel.text = toDoItems[indexPath.row].name
         cell.checkBoxButton.isSelected = toDoItems[indexPath.row].completed
+        cell.toDoItem = toDoItems[indexPath.row]
         return cell
     }
     
