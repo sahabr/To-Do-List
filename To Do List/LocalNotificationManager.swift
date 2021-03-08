@@ -31,12 +31,15 @@ struct LocalNotificationManager {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
             guard error == nil else{
                 print("😡 Error \(error!.localizedDescription)")
+                completed(false)
                 return
             }
             if granted {
                 print("✅ Notifications Authorization Granted")
+                completed(true)
             } else{
                 print("🚫 The user has denied notifications")
+                completed(false)
                 
             }
         }
